@@ -1,0 +1,85 @@
+.keyboard {
+    display: grid;
+    height: 200px;
+    max-width: 900px;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: 50% 50%;
+}
+
+.keyboard-w {
+    grid-row-start: 1;
+    grid-column-end: span 2;
+    grid-column-start: 2;
+}
+
+.keyboard-e {
+    grid-row-start: 1;
+    grid-column-end: span 2;
+    grid-column-start: 4;
+}
+
+.keyboard-t {
+    grid-row-start: 1;
+    grid-column-end: span 2;
+    grid-column-start: 8;
+}
+
+.keyboard-y {
+    grid-row-start: 1;
+    grid-column-end: span 2;
+    grid-column-start: 10;
+}
+
+.keyboard-u {
+    grid-row-start: 1;
+    grid-column-end: span 2;
+    grid-column-start: 12;
+}
+
+.keyboard-a {
+    grid-row-start: 2;
+    grid-column-end: span 2;
+    grid-column-start: 1;
+}
+
+.keyboard-s {
+    grid-row-start: 2;
+    grid-column-end: span 2;
+    grid-column-start: 3;
+}
+
+.keyboard-d {
+    grid-row-start: 2;
+    grid-column-end: span 2;
+    grid-column-start: 5;
+}
+
+.keyboard-f {
+    grid-row-start: 2;
+    grid-column-end: span 2;
+    grid-column-start: 7;
+}
+
+.keyboard-g {
+    grid-row-start: 2;
+    grid-column-end: span 2;
+    grid-column-start: 9;
+}
+
+.keyboard-h {
+    grid-row-start: 2;
+    grid-column-end: span 2;
+    grid-column-start: 11;
+}
+
+.keyboard-j {
+    grid-row-start: 2;
+    grid-column-end: span 2;
+    grid-column-start: 13;
+}
+
+.keyboard-k {
+    grid-row-start: 2;
+    grid-column-end: span 2;
+    grid-column-start: 15;
+}
