@@ -1,5 +1,5 @@
 import Paper from '@mui/material/Paper'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 type KeyColour = "black" | "white"
 
@@ -10,6 +10,8 @@ interface Props {
 }
 
 export default function Key(props:Props) {
+    const [keyPressed, setKeyPressed] = useState(false)
+
     useEffect(() => {
         document.addEventListener('keydown', keyDown)
         document.addEventListener('keyup', keyUp)
@@ -22,13 +24,13 @@ export default function Key(props:Props) {
 
     function keyDown(event:any){
         if (event.key === props.children) {
-            console.log(`key ${props.children} pressed.`)
+            setKeyPressed(true)
         }
     }
 
     function keyUp(event:any) {
         if (event.key === props.children) {
-            console.log(`key ${props.children} released.`)
+            setKeyPressed(false)
         }
     }
 
@@ -51,10 +53,20 @@ export default function Key(props:Props) {
         color: 'white'
     }
 
+    const pressedKeyClasses = {
+        backgroundColor: 'secondary.main'
+    }
+
+    function classes() {
+        const baseClasses = props.keycolour === 'black' ? blackKeyClasses : whiteKeyClasses
+        const pressedClasses = keyPressed ? {...pressedKeyClasses} : {}
+        return { ...baseClasses, ...pressedClasses}
+    }
+
     return <Paper 
                 onKeyDown={keyDown} 
                 className={props.className} 
-                sx={props.keycolour === 'black' ? blackKeyClasses : whiteKeyClasses}>
+                sx={classes()}>
         {props.children}
     </Paper>
 }
