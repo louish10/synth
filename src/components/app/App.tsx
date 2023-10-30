@@ -1,7 +1,5 @@
 import React from 'react';
-import logo from '../../logo.svg';
 import './App.css';
-import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
 import Keyboard from '../keyboard/Keyboard'
 

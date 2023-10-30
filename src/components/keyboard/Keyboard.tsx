@@ -1,39 +1,22 @@
-import Paper from '@mui/material/Paper'
 import './Keyboard.css';
+import Key from '../key/key'
 
 function Keyboard() {
-    const keyClasses = {
-        margin: '2px 10px',
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        borderRadius: "15px",
-        
-    }
-    const whiteKeyClasses = {
-        ...keyClasses,
-        backgroundColor: 'primary.light',
-    }
-    const blackKeyClasses = {
-        ...keyClasses,
-        backgroundColor: 'primary.dark',
-        color: 'white'
-    }
     return <div className='keyboard'>
-        <Paper className='keyboard-w' sx={blackKeyClasses}>w</Paper>
-        <Paper className='keyboard-e' sx={blackKeyClasses}>e</Paper>
-        <Paper className='keyboard-t' sx={blackKeyClasses}>t</Paper>
-        <Paper className='keyboard-y' sx={blackKeyClasses}>y</Paper>
-        <Paper className='keyboard-u' sx={blackKeyClasses}>u</Paper>
+        <Key keycolour='black' className='keyboard-w'>w</Key>
+        <Key keycolour='black' className='keyboard-e'>e</Key>
+        <Key keycolour='black' className='keyboard-t'>t</Key>
+        <Key keycolour='black' className='keyboard-y'>y</Key>
+        <Key keycolour='black' className='keyboard-u'>u</Key>
 
-        <Paper className='keyboard-a' sx={whiteKeyClasses}>a</Paper>
-        <Paper className='keyboard-s' sx={whiteKeyClasses}>s</Paper>
-        <Paper className='keyboard-d' sx={whiteKeyClasses}>d</Paper>
-        <Paper className='keyboard-f' sx={whiteKeyClasses}>f</Paper>
-        <Paper className='keyboard-g' sx={whiteKeyClasses}>g</Paper>
-        <Paper className='keyboard-h' sx={whiteKeyClasses}>h</Paper>
-        <Paper className='keyboard-j' sx={whiteKeyClasses}>j</Paper>
-        <Paper className='keyboard-k' sx={whiteKeyClasses}>k</Paper>
+        <Key keycolour='white' className='keyboard-a'>a</Key>
+        <Key keycolour='white' className='keyboard-s'>s</Key>
+        <Key keycolour='white' className='keyboard-d'>d</Key>
+        <Key keycolour='white' className='keyboard-f'>f</Key>
+        <Key keycolour='white' className='keyboard-g'>g</Key>
+        <Key keycolour='white' className='keyboard-h'>h</Key>
+        <Key keycolour='white' className='keyboard-j'>j</Key>
+        <Key keycolour='white' className='keyboard-k'>k</Key>
     </div>
 }
 
